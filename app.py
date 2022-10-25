@@ -1,5 +1,4 @@
-from flask import Flask, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask
 
 from config.config import Config
 from database.connection import createDBUrl

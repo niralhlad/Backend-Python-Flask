@@ -1,13 +1,10 @@
-d = {
-    "a":1,
-    "b":2
-}
+from util import helper
 
-l = []
-a = {
-    "1": 2,
-    "2": 3
+body = {
+    "patient_id":"   h",
+    "first_name":"Niral",
+    "last_name":"lad",
+    "birth_date":"17-01-1996",
+    "sex":"male"
 }
-l['a'] = a
-d['l'] = l
-print(d)
+print(helper.validateRequestBody('createPatient',body))

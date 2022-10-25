@@ -22,4 +22,10 @@ class ErrorResponse:
         "custom_code":"DUPLICATE_PATIENT_ID"
     }
 
+    INVALID_BODY = { 
+        "error":"Bad Request", 
+        "message":"Please check your request body",
+        "custom_code":"INVALID_REQUEST_BODY"
+    }
+
 

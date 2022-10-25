@@ -35,11 +35,24 @@ class PatientService:
         return None
     
     def deletePatientbyID(self,patientID):
-        print("patientID : ",patientID)
-        patient = PatientModel.query.filter_by(patient_id=patientID).first()
-        print(patient)
+        patient = PatientModel.query.filter_by(patient_id=patientID)
         if patient is not None:
             patient.delete()
             db.session.commit()
             return True
         return None
+    
+    def getPatient(self,firstName,lastName):
+        patients = PatientModel.query.filter_by(first_name=firstName,last_name=lastName)
+        data = []
+        for patient in patients:
+            temp = {
+                "patient_id": patient.patient_id,
+                "first_name": patient.first_name,
+                "last_name": patient.last_name,
+                "birth_date": patient.birth_date,
+                "sex": patient.sex
+            }
+            data.append(temp)
+        print(data)
+        return data
