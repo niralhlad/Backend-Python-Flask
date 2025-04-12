@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "Test Server"
+version = "0.1.0"
+description = "My First Server on Cloud"
+authors = ["Niral Lad <niralhlad@gmail.com>"]
+readme = "README.md"
+packages = [{include = "server"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^3.1.0"
+jsonify = "^0.5"
+flask-sqlalchemy = "^3.1.1"
+psycopg2-binary = "^2.9.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tools.poetry.scripts]
+server = "server.app:main"
