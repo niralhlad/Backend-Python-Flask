@@ -1,8 +1,8 @@
 from flask import Flask
 
-from config.config import Config
-from database.connection import createDBUrl
-from database.dbConn import db
+from server.config.config import Config
+from server.database.connection import createDBUrl
+from server.database.dbConn import db
 
 configObj = Config()
 
